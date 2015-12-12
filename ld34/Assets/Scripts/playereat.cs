@@ -3,6 +3,7 @@ using System.Collections;
 
 public class playereat : MonoBehaviour {
 	public AudioSource eating;
+
 	void start()
 	{
 		
@@ -17,7 +18,7 @@ public class playereat : MonoBehaviour {
 
 			if (col.gameObject.tag == "Fish")
 			{
-				Destroy(col.gameObject);
+				SimplePool.Despawn(col.gameObject);
 	            newscale++;
 				eating.Play();
 	            transform.localScale = new Vector3(newscale, newscale, newscale);

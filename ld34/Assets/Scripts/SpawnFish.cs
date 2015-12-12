@@ -4,30 +4,31 @@ using System.Collections;
 
 public class SpawnFish : MonoBehaviour {
 	public GameObject[] Fishes;
+	int playerscale=1;
 
 
 
     // Use this for initialization
     void Start () {
-	
+		
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		playerscale = (int) GameObject.Find("player").GetComponent<Transform>().localScale.x;
 	
 	}
-	public void spawn(float playerscale)
+	public void spawn()
 	{
-		GameObject GO =(GameObject) Instantiate(Fishes[Random.Range(0,Fishes.Length)],this.transform.position,Quaternion.identity);
-		//float newscale= Random.value*Random.Range(3,10);
+		GameObject GO =(GameObject) SimplePool.Spawn (Fishes[Random.Range(0,Fishes.Length)],this.transform.position,Quaternion.identity);
+
 		if (GO.tag=="Fish")
 		{
-			int minscale=(int) playerscale - 3;
-			int maxscale=(int) playerscale + 3;
+			int minscale = playerscale;
+			int maxscale= playerscale+4;
 
-			float newscale= Random.Range(Mathf.Clamp(minscale,1,10),Mathf.Clamp(maxscale,1,10));
-		GO.transform.localScale= new Vector3(newscale,newscale,newscale);
+			float newscale= Random.Range(minscale,maxscale);
+			GO.transform.localScale= new Vector3(newscale,newscale,newscale);
 		}
 	}
 
