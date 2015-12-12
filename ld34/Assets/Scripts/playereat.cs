@@ -14,10 +14,12 @@ public class playereat : MonoBehaviour {
         if (col.transform.localScale.x <= transform.localScale.x) 
         {
 
-            Destroy(col.gameObject);
-            newscale++;
-            transform.localScale = new Vector3(newscale, newscale, newscale);
-		
+			if (col.gameObject.tag == "Fish")
+			{
+				Destroy(col.gameObject);
+	            newscale++;
+	            transform.localScale = new Vector3(newscale, newscale, newscale);
+			}
         }
     }
 }
