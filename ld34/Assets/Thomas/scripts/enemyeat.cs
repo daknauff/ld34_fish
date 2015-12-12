@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class enemyeat : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class enemyeat : MonoBehaviour {
     {
         if (col.transform.localScale.x < transform.localScale.x) 
         {
-            Application.LoadLevel("gameover");
+			SceneManager.LoadScene("gameover");
         }
         
     }

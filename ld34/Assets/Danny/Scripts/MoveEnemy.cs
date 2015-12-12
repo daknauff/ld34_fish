@@ -14,7 +14,6 @@ public class MoveEnemy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float x_auto = Time.deltaTime*(movespeed*variospeed);
-		Debug.Log(x_auto);
 		transform.Translate(x_auto,0,0);
 	
 	}

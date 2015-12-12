@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class PlayGame : MonoBehaviour {
 
@@ -12,7 +14,7 @@ public class PlayGame : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown("w"))
         {
-            Application.LoadLevel("thoScene");
+            SceneManager.LoadScene("thoScene");
         }
 	}
 }

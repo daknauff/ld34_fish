@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class playereat : MonoBehaviour {
+	void start()
+	{
+		
+	}
     
     
     void OnCollisionEnter2D(Collision2D col)
@@ -13,6 +17,7 @@ public class playereat : MonoBehaviour {
             Destroy(col.gameObject);
             newscale++;
             transform.localScale = new Vector3(newscale, newscale, newscale);
+		
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class backToMenu : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class backToMenu : MonoBehaviour {
 	void Update () {
 	    if (Input.GetKeyDown("w"))
         {
-            Application.LoadLevel("Menu");
+			SceneManager.LoadScene("Menu");
         }
 	}
 }
