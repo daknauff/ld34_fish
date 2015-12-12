@@ -21,9 +21,11 @@ public class SpawnFish : MonoBehaviour {
 	{
 		GameObject GO =(GameObject) Instantiate(Fishes[Random.Range(0,Fishes.Length)],this.transform.position,Quaternion.identity);
 		//float newscale= Random.value*Random.Range(3,10);
+		if (GO.tag=="Fish")
+		{
 		float newscale= Random.Range(1,10);
 		GO.transform.localScale= new Vector3(newscale,newscale,newscale);
-
+		}
 	}
 
 }

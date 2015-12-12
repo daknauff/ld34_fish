@@ -20,7 +20,7 @@ public class HightLightEateble : MonoBehaviour {
 	void Update () {
 		float playerscale = player.GetComponent<Transform>().localScale.x;
 		float enemyscale = GetComponent<Transform>().localScale.x;
-		Debug.Log ("playerscale:" + playerscale + " enemyscale:" + enemyscale);
+
 
 		if (playerscale >= enemyscale)
 		{
