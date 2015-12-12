@@ -5,11 +5,14 @@ public class SpawnController : MonoBehaviour
 {
     public GameObject[] spawners;
     public int spawntimer = 1;
+	float playerscale;
+
 
 
 
 	// Use this for initialization
 	void Start () {
+		playerscale = GameObject.Find("player").GetComponent<Transform>().localScale.x; 
 		InvokeRepeating("startspawner",spawntimer,spawntimer);
         
 	
@@ -22,6 +25,6 @@ public class SpawnController : MonoBehaviour
 
 	void startspawner()
 	{
-		spawners[Random.Range(0,spawners.Length)].SendMessage("spawn");
+		spawners[Random.Range(0,spawners.Length)].SendMessage("spawn",playerscale);
 	}
 }
