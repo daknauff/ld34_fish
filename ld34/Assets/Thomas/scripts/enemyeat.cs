@@ -7,7 +7,7 @@ public class enemyeat : MonoBehaviour {
     {
         if (col.transform.localScale.x < transform.localScale.x) 
         {
-            //endgame
+            Application.LoadLevel("gameover");
         }
         
     }
