@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class playereat : MonoBehaviour {
+	public AudioSource eating;
 	void start()
 	{
 		
@@ -18,6 +19,7 @@ public class playereat : MonoBehaviour {
 			{
 				Destroy(col.gameObject);
 	            newscale++;
+				eating.Play();
 	            transform.localScale = new Vector3(newscale, newscale, newscale);
 			}
         }
