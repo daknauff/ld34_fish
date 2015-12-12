@@ -10,13 +10,9 @@ public class movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.position += Vector3.down * speed * Time.deltaTime;
-        }
+		float Translate =Input.GetAxis("Vertical")*speed*Time.deltaTime;
+		      
+		transform.Translate(0,Translate,0);
+		 
 	}
 }
