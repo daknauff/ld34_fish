@@ -19,11 +19,11 @@ public class SpawnFish : MonoBehaviour {
 	}
 	public void spawn()
 	{
-		Instantiate(Fishes[Random.Range(0,Fishes.Length)],this.transform.position,Quaternion.identity);
+		GameObject GO =(GameObject) Instantiate(Fishes[Random.Range(0,Fishes.Length)],this.transform.position,Quaternion.identity);
+		//float newscale= Random.value*Random.Range(3,10);
+		float newscale= Random.Range(1,10);
+		GO.transform.localScale= new Vector3(newscale,newscale,newscale);
 
 	}
-	void OnBecameInvisible(){
-		
-	Destroy(gameObject);
-	}
+
 }

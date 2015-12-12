@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: 2f268be46776c9a4285dc5996466c3a0
-timeCreated: 1449926057
+guid: bacf2615ef42f3b43a2c973728379389
+timeCreated: 1449926168
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: images_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,7 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -39,7 +38,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -50,22 +49,7 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: images_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 282
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -141, y: 89.5}
-        - {x: -141, y: -89.5}
-        - {x: 141, y: -89.5}
-        - {x: 141, y: 89.5}
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 
