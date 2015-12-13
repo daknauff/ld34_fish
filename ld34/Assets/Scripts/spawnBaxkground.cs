@@ -18,7 +18,7 @@ public class spawnBaxkground : MonoBehaviour {
         //calculate current position
         Vector3 backPos = gameObject.transform.position;
         //calculate new position
-        print(backPos);
+
         float X = backPos.x + width * 4;
         float Y = backPos.y;
         //move to new position when invisible

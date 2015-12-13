@@ -29,7 +29,7 @@ public class SpawnFish : MonoBehaviour {
 		if (GO.tag=="Fish")
 		{
 			int minscale = Playerscale.level;
-			int maxscale= Playerscale.level+8;
+			int maxscale= Playerscale.level+4;
 
 			float newscale= Random.Range(minscale,maxscale)*Scale;
 			GO.transform.localScale= new Vector3(newscale,newscale,newscale);

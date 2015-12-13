@@ -7,7 +7,7 @@ public class MoveEnemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		variospeed=Random.Range(1,3);
+		variospeed=Random.Range(1,3) + Playerscale.speedincrease;
 	
 	}
 	

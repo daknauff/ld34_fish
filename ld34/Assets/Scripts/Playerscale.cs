@@ -5,6 +5,7 @@ public static class Playerscale {
 	public static float Scale=0.25f;
 	public static int level=1;
     public static string scene = "Level1";
+    public static int speedincrease = 0;
 
     public static void reset()
     {

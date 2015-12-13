@@ -19,9 +19,8 @@ public class playereat : MonoBehaviour {
 	{
         if (Fisheaten == FishForNextLevel) 
         {
-            Playerscale.reset();
-            Playerscale.swapscene();
-            SceneManager.LoadScene(Playerscale.scene);
+            Playerscale.speedincrease++;
+            SceneManager.LoadScene("nextlevel");
         }
 	}
     
