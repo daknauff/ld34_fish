@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class movebackkground : MonoBehaviour {
-    public int movespeed;
+    public float movespeed;
 	// Use this for initialization
 	void Start () {
 	
