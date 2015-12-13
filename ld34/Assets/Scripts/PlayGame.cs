@@ -14,7 +14,6 @@ public class PlayGame : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown("w"))
         {
-            Playerscale.reset();
             SceneManager.LoadScene(Playerscale.scene);
         }
         if (Input.GetKeyDown("s"))
