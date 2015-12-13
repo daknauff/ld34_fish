@@ -8,7 +8,13 @@ public class playereat : MonoBehaviour {
     private int Fisheaten;
     public int FishForNextLevel = 10;
     public Text myText;
-	
+
+    void Start() 
+    {
+        float newScale = Playerscale.level*Playerscale.Scale;
+        transform.localScale = new Vector3(newScale,newScale,newScale);
+    }
+
     void Update()
 	{
         if (Fisheaten == FishForNextLevel) 
