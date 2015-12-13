@@ -3,21 +3,23 @@ using System.Collections;
 
 
 public class SpawnFish : MonoBehaviour {
+	public float Scale= 0.25f;
+	public int level=1;
 	public GameObject[] Fishes;
-	int playerscale=1;
-    public Transform FishBowl;
-
+	public Transform FishBowl;
+	float playerscale;
 
 
 
     // Use this for initialization
-    void Start () {
+	void Start () {
 		
 	}
 
 	// Update is called once per frame
 	void Update () {
-		playerscale = (int) GameObject.Find("player").GetComponent<Transform>().localScale.x;
+		
+		playerscale = Playerscale.Scale * Playerscale.level;
 	
 	}
 	public void spawn()
@@ -26,10 +28,10 @@ public class SpawnFish : MonoBehaviour {
 
 		if (GO.tag=="Fish")
 		{
-			int minscale = playerscale;
-			int maxscale= playerscale+4;
+			int minscale = Playerscale.level;
+			int maxscale= Playerscale.level+8;
 
-			float newscale= Random.Range(minscale,maxscale);
+			float newscale= Random.Range(minscale,maxscale)*Scale;
 			GO.transform.localScale= new Vector3(newscale,newscale,newscale);
             GO.transform.SetParent(FishBowl);
 		}

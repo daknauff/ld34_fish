@@ -18,8 +18,9 @@ public class checkifdeadly : MonoBehaviour {
     {
         if(other.gameObject.tag == "deadly")
         {
-            Debug.Log("hit");
-            GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            
+            //GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+			Instantiate(explosion, transform.position, Quaternion.identity);
             //Destroy(this.gameObject,2);  //destroy player
 			this.gameObject.GetComponent<Renderer>().enabled=false;
 			SimplePool.Despawn(other.gameObject);  //despawn bomb

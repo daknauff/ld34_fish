@@ -11,15 +11,16 @@ public class SpawnController : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start () {
-		InvokeRepeating("startspawner",spawntimer,spawntimer);
-        
+	void Start () {       
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		if (!IsInvoking("startspawner"))
+		{
+			Invoke("startspawner",(Random.value+Random.value+Random.value));
+		}
 	}
 
 	void startspawner()
