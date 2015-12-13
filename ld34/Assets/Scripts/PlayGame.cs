@@ -15,7 +15,12 @@ public class PlayGame : MonoBehaviour {
         if (Input.GetKeyDown("w"))
         {
             Playerscale.reset();
-            SceneManager.LoadScene("thoScene");
+            SceneManager.LoadScene(Playerscale.scene);
         }
-	}
+        if (Input.GetKeyDown("s"))
+        {
+            Application.Quit();
+            
+        }
+    }
 }

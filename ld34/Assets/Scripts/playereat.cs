@@ -20,7 +20,8 @@ public class playereat : MonoBehaviour {
         if (Fisheaten == FishForNextLevel) 
         {
             Playerscale.reset();
-            SceneManager.LoadScene("Level2");
+            Playerscale.swapscene();
+            SceneManager.LoadScene(Playerscale.scene);
         }
 	}
     
