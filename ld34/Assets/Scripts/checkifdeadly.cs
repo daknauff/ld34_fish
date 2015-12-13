@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class checkifdeadly : MonoBehaviour {
     public GameObject explosion;
 	// Use this for initialization
 	void Start () {
-	
+		this.gameObject.GetComponent<Renderer>().enabled=true;
 	}
 	
 	// Update is called once per frame
@@ -19,9 +20,15 @@ public class checkifdeadly : MonoBehaviour {
         {
             Debug.Log("hit");
             GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
-            Destroy(this.gameObject,2);
-            SimplePool.Despawn(other.gameObject);
+            //Destroy(this.gameObject,2);  //destroy player
+			this.gameObject.GetComponent<Renderer>().enabled=false;
+			SimplePool.Despawn(other.gameObject);  //despawn bomb
+			Invoke("restart",2);
             
         }
     }
+	void restart()
+	{
+		SceneManager.LoadScene("gameover");
+	}
 }

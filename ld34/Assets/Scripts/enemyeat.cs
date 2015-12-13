@@ -6,14 +6,11 @@ public class enemyeat : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
     {
-		if (col.gameObject.tag == "deadly")
+		if (col.gameObject.tag == "Player" && col.gameObject.transform.localScale.x < this.gameObject.transform.localScale.x)
 		{
-			//make bigbang
-		}
-		else if (col.transform.localScale.x < transform.localScale.x && col.gameObject.tag == "Fish") 
-        {
 			SceneManager.LoadScene("gameover");
-        }
+		}
+
         
     }
 }
