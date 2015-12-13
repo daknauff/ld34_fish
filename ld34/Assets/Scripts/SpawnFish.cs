@@ -5,6 +5,8 @@ using System.Collections;
 public class SpawnFish : MonoBehaviour {
 	public GameObject[] Fishes;
 	int playerscale=1;
+    public Transform FishBowl;
+
 
 
 
@@ -29,6 +31,7 @@ public class SpawnFish : MonoBehaviour {
 
 			float newscale= Random.Range(minscale,maxscale);
 			GO.transform.localScale= new Vector3(newscale,newscale,newscale);
+            GO.transform.SetParent(FishBowl);
 		}
 	}
 
