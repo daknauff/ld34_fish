@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class playereat : MonoBehaviour {
 	public AudioSource eating;
-    private int Fisheaten;
+    private int Fisheaten=0;
     public int FishForNextLevel = 10;
     public Text myText;
 

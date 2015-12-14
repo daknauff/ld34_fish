@@ -7,7 +7,20 @@ public static class Playerscale {
     public static string scene = "Level1";
     public static int speedincrease = 0;
 
-    public static void reset()
+    public static void resetlevel()
+    {
+        Scale = 0.25f;
+        level = 4;
+        scene = "Level1";
+    }
+
+    public static void resetscale()
+    {
+        Scale = 0.25f;
+        level = 4;
+        
+    }
+    public static void resetall()
     {
         Scale = 0.25f;
         level = 4;

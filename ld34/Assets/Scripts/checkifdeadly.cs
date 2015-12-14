@@ -45,7 +45,7 @@ public class checkifdeadly : MonoBehaviour {
     }
 	void restart()
 	{
-        Playerscale.reset();
+        Playerscale.resetall();
 		SceneManager.LoadScene("gameover");
 	}
 }

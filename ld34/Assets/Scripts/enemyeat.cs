@@ -8,7 +8,7 @@ public class enemyeat : MonoBehaviour {
     {
 		if (col.gameObject.tag == "Player" && col.gameObject.transform.localScale.x < this.gameObject.transform.localScale.x)
 		{
-            Playerscale.reset();
+            Playerscale.resetall();
             SceneManager.LoadScene("gameover");
 		}
 
